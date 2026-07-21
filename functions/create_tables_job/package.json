@@ -1,0 +1,9 @@
+{
+  "name": "create_tables_job",
+  "version": "1.0.0",
+  "description": "Catalyst Basic I/O function to create datastore tables from schema",
+  "main": "index.js",
+  "dependencies": {
+    "zcatalyst-sdk-node": "latest"
+  }
+}

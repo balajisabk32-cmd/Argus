@@ -1,0 +1,56 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 2,
+      "id": "53405000000013024",
+      "name": "Project-Rainfall",
+      "domain": {
+        "id": "50044188527",
+        "name": "project-rainfall-60079235749.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60079235749",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    },
+    {
+      "idx": 1,
+      "id": "53405000000013048",
+      "name": "Argus",
+      "domain": {
+        "id": "50044189013",
+        "name": "argus-60079235749.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60079235749",
+          "name": "Development",
+          "type": 3,
+          "env_status": "Active",
+          "project_details": {
+            "project_name": "Argus",
+            "id": "53405000000013048",
+            "project_type": "Live"
+          },
+          "is_default": true,
+          "action_required": false
+        }
+      ]
+    }
+  ]
+}

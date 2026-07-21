@@ -1,0 +1,11 @@
+{
+	"name": "argus_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest",
+		"express": "^4.18.2",
+		"d3-force-3d": "^3.0.6"
+	}
+}

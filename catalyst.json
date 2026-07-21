@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "targets": [
+      "argus_function",
+      "create_tables_job"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "appsail": [
+    {
+      "source": "argus/.next/standalone",
+      "name": "argus-frontend",
+      "build_path": "argus/.next/standalone"
+    }
+  ]
+}
