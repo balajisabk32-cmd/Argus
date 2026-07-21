@@ -54,9 +54,10 @@ module.exports = async (cronDetails, context) => {
     const app = catalyst.initialize(context);
     const datastore = app.datastore();
     
-    const schemaPath = path.join(__dirname, '../../catalyst-schema.md');
-    
-    console.log('Parsing schema from catalyst-schema.md...\n');
+    // In the Catalyst cloud environment, we must use the file bundled inside the function directory
+    const schemaPath = path.join(__dirname, 'catalyst-schema.md');
+
+    console.log(`Parsing schema from ${schemaPath}...\n`);
     const tables = parseSchema(schemaPath);
     console.log(`Found ${tables.length} tables in schema.\n`);
 
