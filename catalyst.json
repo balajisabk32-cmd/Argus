@@ -10,9 +10,9 @@
   },
   "appsail": [
     {
-      "source": "argus/.next/standalone",
+      "source": "argus",
       "name": "argus-frontend",
-      "build_path": "argus/.next/standalone"
+      "build_path": "argus"
     }
   ]
 }
