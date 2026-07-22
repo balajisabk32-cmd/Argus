@@ -1,6 +1,11 @@
 {
-  "name": "processCsvFunction",
-  "type": "advancedio",
-  "stack": "python3.13",
-  "entry": "main.py"
+  "deployment": {
+    "name": "processCsvFunction",
+    "stack": "python3.13",
+    "type": "advancedio",
+    "env_variables": {}
+  },
+  "execution": {
+    "main": "main.py"
+  }
 }
