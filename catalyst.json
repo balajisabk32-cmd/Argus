@@ -2,7 +2,8 @@
   "functions": {
     "targets": [
       "argus_function",
-      "create_tables_job"
+      "create_tables_job",
+      "csv_importer"
     ],
     "ignore": [],
     "source": "functions"

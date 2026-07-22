@@ -1,0 +1,5 @@
+{
+  "name": "csv_importer",
+  "type": "advancedio",
+  "stack": "python3.9"
+}
