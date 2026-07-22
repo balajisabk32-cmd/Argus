@@ -12,8 +12,211 @@ const TYPE_MAPPING = {
   'Boolean': 'boolean'
 };
 
-function parseSchema(schemaPath) {
-  const content = fs.readFileSync(schemaPath, 'utf-8');
+function parseSchema() {
+  const content = `
+## CaseMaster
+
+| Column | Type |
+|---|---|
+| CaseMasterID | Int |
+| CrimeNo | Text |
+| CaseNo | Int |
+| CrimeRegisteredDate | Date |
+| PolicePersonID | Int |
+| PoliceStationID | Int |
+| CaseCategoryID | Int |
+| GravityOffenceID | Int |
+| CrimeMajorHeadID | Int |
+| CrimeMinorHeadID | Int |
+| CaseStatusID | Int |
+| CourtID | Int |
+| IncidentFromDate | Datetime |
+| IncidentToDate | Datetime |
+| InfoReceivedPSDate | Datetime |
+| latitude | Double |
+| longitude | Double |
+| BriefFacts | Text |
+
+## Unit
+
+| Column | Type |
+|---|---|
+| UnitID | Int |
+| UnitName | Text |
+| TypeID | Int |
+| ParentUnit | Double |
+| NationalityID | Int |
+| StateID | Int |
+| DistrictID | Int |
+| Active | Int |
+
+## District
+
+| Column | Type |
+|---|---|
+| DistrictID | Int |
+| DistrictName | Text |
+| StateID | Int |
+| Active | Int |
+
+## GravityOffence
+
+| Column | Type |
+|---|---|
+| GravityOffenceID | Int |
+| LookupValue | Text |
+
+## CrimeHead
+
+| Column | Type |
+|---|---|
+| CrimeHeadID | Int |
+| CrimeGroupName | Text |
+| Active | Int |
+
+## Accused
+
+| Column | Type |
+|---|---|
+| AccusedMasterID | Int |
+| CaseMasterID | Int |
+| PersonMasterID | Int |
+| AccusedName | Text |
+| AgeYear | Int |
+| GenderID | Text |
+| PersonID | Text |
+| MO | Text |
+
+## Victim
+
+| Column | Type |
+|---|---|
+| VictimMasterID | Int |
+| CaseMasterID | Int |
+| VictimName | Text |
+| AgeYear | Int |
+| GenderID | Int |
+| VictimPolice | Int |
+
+## Employee
+
+| Column | Type |
+|---|---|
+| EmployeeID | Int |
+| DistrictID | Int |
+| UnitID | Int |
+| RankID | Int |
+| DesignationID | Int |
+| KGID | Text |
+| FirstName | Text |
+| EmployeeDOB | Date |
+| GenderID | Int |
+| BloodGroupID | Int |
+| PhysicallyChallenged | Int |
+| AppointmentDate | Date |
+
+## PersonMaster
+
+| Column | Type |
+|---|---|
+| PersonMasterID | Int |
+| PersonName | Text |
+| GenderID | Text |
+| HomeDistrictID | Int |
+| PrimaryCrimeHeadID | Int |
+| PrimaryMO | Text |
+| TotalCasesLinked | Int |
+| IsRepeatOffender | Int |
+
+## ArrestSurrender
+
+| Column | Type |
+|---|---|
+| ArrestSurrenderID | Int |
+| CaseMasterID | Int |
+| ArrestSurrenderTypeID | Int |
+| ArrestSurrenderDate | Date |
+| ArrestSurrenderStateId | Int |
+| ArrestSurrenderDistrictId | Int |
+| PoliceStationID | Int |
+| IOID | Int |
+| CourtID | Int |
+| AccusedMasterID | Int |
+| IsAccused | Int |
+| IsComplainantAccused | Int |
+
+## Anomalies
+
+| Column | Type |
+|---|---|
+| CaseMasterID | Int |
+| CrimeMajorHeadID | Int |
+| AnomalyScore | Double |
+| PrimaryDrivers | Text |
+| ReportingDelayHours | Double |
+| NumAccused | Int |
+| NumVictims | Int |
+| DistFromStationTypicalKm | Double |
+
+## Hotspots
+
+| Column | Type |
+|---|---|
+| DistrictName | Text |
+| GridLat | Double |
+| GridLon | Double |
+| TimeBucket | Text |
+| CaseCount | Int |
+| AvgGravity | Double |
+| DensityScore | Double |
+| IsHotspot | Boolean |
+
+## TrendAlerts
+
+| Column | Type |
+|---|---|
+| DistrictName | Text |
+| CrimeGroupName | Text |
+| Month | Text |
+| CaseCount | Int |
+| BaselineMean | Double |
+| ZScore | Double |
+| AlertLevel | Text |
+
+## StationRiskScore
+
+| Column | Type |
+|---|---|
+| PoliceStationID | Int |
+| UnitName | Text |
+| DistrictName | Text |
+| VelocityScore | Double |
+| SeverityScore | Double |
+| RepeatScore | Double |
+| RiskScore | Double |
+| RiskTier | Text |
+
+## ComplainantDetails
+
+| Column | Type |
+|---|---|
+| ComplainantID | Int |
+| CaseMasterID | Int |
+| ComplainantName | Text |
+| AgeYear | Int |
+| OccupationID | Int |
+| ReligionID | Int |
+| CasteID | Int |
+| GenderID | Int |
+
+## OccupationMaster
+
+| Column | Type |
+|---|---|
+| OccupationID | Int |
+| OccupationName | Text |
+`;
+
   const lines = content.split('\n');
   
   const tables = [];
@@ -53,12 +256,9 @@ module.exports = async (cronDetails, context) => {
   try {
     const app = catalyst.initialize(context);
     const datastore = app.datastore();
-    
-    // In the Catalyst cloud environment, we must use the file bundled inside the function directory
-    const schemaPath = path.join(__dirname, 'catalyst-schema.md');
 
-    console.log(`Parsing schema from ${schemaPath}...\n`);
-    const tables = parseSchema(schemaPath);
+    console.log(`Parsing embedded schema...\n`);
+    const tables = parseSchema();
     console.log(`Found ${tables.length} tables in schema.\n`);
 
     for (const tableDef of tables) {
