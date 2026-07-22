@@ -1,0 +1,5 @@
+{
+  "name": "import_data_job",
+  "type": "cron",
+  "stack": "node22"
+}

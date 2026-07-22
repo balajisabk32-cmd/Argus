@@ -3,7 +3,8 @@
     "targets": [
       "argus_function",
       "create_tables_job",
-      "processCsvFunction"
+      "processCsvFunction",
+      "import_data_job"
     ],
     "ignore": [],
     "source": "functions"
