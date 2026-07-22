@@ -1,0 +1,6 @@
+{
+  "name": "processCsvFunction",
+  "type": "advancedio",
+  "stack": "python3.13",
+  "entry": "main.py"
+}
