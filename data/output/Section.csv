@@ -1,0 +1,12 @@
+ActCode,SectionCode,SectionDescription,Active
+BNS,103,Murder,1
+BNS,115,Voluntarily causing hurt,1
+BNS,303,Theft,1
+BNS,305,Theft in a dwelling house,1
+BNS,331,House-breaking / Burglary,1
+BNS,309,Robbery,1
+BNS,85,Cruelty by husband/relatives (Dowry),1
+BNS,74,Assault/use of criminal force to woman,1
+BNS,318,Cheating,1
+ITACT,66C,Identity theft,1
+ITACT,66D,Cheating by personation using computer,1

@@ -1,0 +1,61 @@
+UnitID,UnitName,TypeID,ParentUnit,NationalityID,StateID,DistrictID,Active
+1,Bangalore Urban Circle Office,2,,1,1,1,1
+2,Bangalore Urban PS-1,1,1.0,1,1,1,1
+3,Bangalore Urban PS-2,1,1.0,1,1,1,1
+4,Bangalore Urban PS-3,1,1.0,1,1,1,1
+5,Bangalore Urban PS-4,1,1.0,1,1,1,1
+6,Mysore Circle Office,2,,1,1,2,1
+7,Mysore PS-1,1,6.0,1,1,2,1
+8,Mysore PS-2,1,6.0,1,1,2,1
+9,Dakshina Kannada Circle Office,2,,1,1,3,1
+10,Dakshina Kannada PS-1,1,9.0,1,1,3,1
+11,Dakshina Kannada PS-2,1,9.0,1,1,3,1
+12,Belgaum Circle Office,2,,1,1,4,1
+13,Belgaum PS-1,1,12.0,1,1,4,1
+14,Belgaum PS-2,1,12.0,1,1,4,1
+15,Belgaum PS-3,1,12.0,1,1,4,1
+16,Belgaum PS-4,1,12.0,1,1,4,1
+17,Gulbarga Circle Office,2,,1,1,5,1
+18,Gulbarga PS-1,1,17.0,1,1,5,1
+19,Gulbarga PS-2,1,17.0,1,1,5,1
+20,Gulbarga PS-3,1,17.0,1,1,5,1
+21,Bellary Circle Office,2,,1,1,6,1
+22,Bellary PS-1,1,21.0,1,1,6,1
+23,Bellary PS-2,1,21.0,1,1,6,1
+24,Tumkur Circle Office,2,,1,1,7,1
+25,Tumkur PS-1,1,24.0,1,1,7,1
+26,Tumkur PS-2,1,24.0,1,1,7,1
+27,Bijapur Circle Office,2,,1,1,8,1
+28,Bijapur PS-1,1,27.0,1,1,8,1
+29,Bijapur PS-2,1,27.0,1,1,8,1
+30,Dharwad Circle Office,2,,1,1,9,1
+31,Dharwad PS-1,1,30.0,1,1,9,1
+32,Dharwad PS-2,1,30.0,1,1,9,1
+33,Dharwad PS-3,1,30.0,1,1,9,1
+34,Dharwad PS-4,1,30.0,1,1,9,1
+35,Udupi Circle Office,2,,1,1,10,1
+36,Udupi PS-1,1,35.0,1,1,10,1
+37,Udupi PS-2,1,35.0,1,1,10,1
+38,Kodagu Circle Office,2,,1,1,11,1
+39,Kodagu PS-1,1,38.0,1,1,11,1
+40,Kodagu PS-2,1,38.0,1,1,11,1
+41,Kodagu PS-3,1,38.0,1,1,11,1
+42,Kodagu PS-4,1,38.0,1,1,11,1
+43,Shimoga Circle Office,2,,1,1,12,1
+44,Shimoga PS-1,1,43.0,1,1,12,1
+45,Shimoga PS-2,1,43.0,1,1,12,1
+46,Shimoga PS-3,1,43.0,1,1,12,1
+47,Shimoga PS-4,1,43.0,1,1,12,1
+48,Raichur Circle Office,2,,1,1,13,1
+49,Raichur PS-1,1,48.0,1,1,13,1
+50,Raichur PS-2,1,48.0,1,1,13,1
+51,Raichur PS-3,1,48.0,1,1,13,1
+52,Raichur PS-4,1,48.0,1,1,13,1
+53,Chitradurga Circle Office,2,,1,1,14,1
+54,Chitradurga PS-1,1,53.0,1,1,14,1
+55,Chitradurga PS-2,1,53.0,1,1,14,1
+56,Hassan Circle Office,2,,1,1,15,1
+57,Hassan PS-1,1,56.0,1,1,15,1
+58,Hassan PS-2,1,56.0,1,1,15,1
+59,Hassan PS-3,1,56.0,1,1,15,1
+60,Hassan PS-4,1,56.0,1,1,15,1
