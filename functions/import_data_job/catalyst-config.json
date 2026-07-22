@@ -1,5 +1,11 @@
 {
-  "name": "import_data_job",
-  "type": "cron",
-  "stack": "node22"
+	"deployment": {
+		"name": "import_data_job",
+		"stack": "node22",
+		"type": "job",
+		"env_variables": {}
+	},
+	"execution": {
+		"main": "index.js"
+	}
 }
